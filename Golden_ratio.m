@@ -1,31 +1,31 @@
-function Golden_ratio (a, b, eps1)
+function Golden_ratio (a, b, eps)
+    t = 1.6180339887498948482;    
     k = 0;
-    l = abs(b - a);
-    t = 1.6180339887498948482;
+    l = abs(b-a);
     K = [k];
     L = [l];
 
-    while(l > eps1)
-        k = k + 1;
-        K(k) = k;
-        x1 = b - ((b - a)/t);
-        x2=a + ((b - a)/t);
-        if (f(x1) > f(x2))
+    while l > eps
+        x1 = b - ((b - a) / t);
+        x2 = a + ((b - a) / t);
+        if f(x1) > f(x2)
             a = x1;
         else
             b = x2;
         end
+        
+        k = k + 1;
         l = abs(b - a);
-        L(k) = l;
+        K(k+1) = k;
+        L(k+1) = l;
     end
     
-    x0 = (a + b)/2;
+    x0 = (a+b)/2;
     stem(K, L);
 
-    fprintf('\nРезультат:');
-    fprintf('\nx* = %.7f', x0);
-    fprintf('\nf(x*) = %.7f', f(x0));
-    fprintf('\nКоличество итераций = %.1f', k);
-    fprintf('\nКоличество вычисленных функций = %.1f', k+2);
-    fprintf('\n \n');
+    fprintf('\nРезультат:\n');
+    fprintf('x* = %.7f\n', x0);
+    fprintf('f* = %.7f\n', f(x0));
+    fprintf('Количество итераций = %d\n', k);
+    fprintf('Количество вычисленных функций = %d\n', k+2);
 end
