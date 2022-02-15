@@ -1,3 +1,5 @@
+% Метод циклического покоординатного спуска
+
 function cpks(Q, b, c, eps, x0)
     Xmin = -inv(Q)*b;
     dx = Xmin(1) - x0(1);

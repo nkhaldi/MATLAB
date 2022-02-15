@@ -1,3 +1,5 @@
+% Метод квадратичной аппроксимации
+
 function quadr_approx (a, b, eps)
     t = (a + b) / 2;
     k = 0;

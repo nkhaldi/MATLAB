@@ -1,3 +1,5 @@
+% Метод дихотомии
+
 function dichotomy (a, b, eps)
     d = eps / 10;    
     k = 0;
