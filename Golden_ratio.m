@@ -1,4 +1,4 @@
-function Golden_ratio (a, b, eps)
+function golden_ratio (a, b, eps)
     t = 1.6180339887498948482;    
     k = 0;
     l = abs(b-a);

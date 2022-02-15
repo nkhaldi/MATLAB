@@ -1,4 +1,4 @@
-function Dichotomy (a, b, eps)
+function dichotomy (a, b, eps)
     d = eps / 10;    
     k = 0;
     l = abs(b - a);
