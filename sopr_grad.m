@@ -15,8 +15,8 @@ function sopr_grad(Q, b, c, eps, x0)
     w = r;
     X = [x0(1)];
     Y = [x0(2)];
-    i = 0;
     nw = 1;
+    i = 0;
     while nw > eps
         i = i + 1;
         i

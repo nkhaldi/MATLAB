@@ -14,8 +14,8 @@ function cpks(Q, b, c, eps, x0)
     X = [x0(1)];
     Y = [x0(2)];
     w = -(Q*x0 + b);
-    i = 0;
     A = eye(2);
+    i = 0;
     while norm(w) > eps
         i = i + 1;
         for j = 1:2
