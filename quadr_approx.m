@@ -6,10 +6,10 @@ function quadr_approx (a, b, eps)
     l = abs(b - a);
     K = [k];
     L = [l];
+    fa = f(a);
+    fb = f(b);
+    ft = f(t);
     while l > eps
-        fa = f(a);
-        fb = f(b);
-        ft = f(t);
         t1 = (fa*(t.^2-b.^2) + fb*(a.^2-t.^2)) + ft*(b.^2-a.^2);
         t2 = 2*(fa*(t-b) + fb*(a-t) + ft*(b-a));
         tm = t1 / t2;
